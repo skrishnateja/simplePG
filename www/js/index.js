@@ -19,10 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        alert("JSON");
-        $.getJSON('http://skrishnateja.xyz/phonegaptest/json.php', function (data) {
-            alert(data);
-          });
+        
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -37,6 +34,10 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        alert("JSON");
+        $.getJSON('http://skrishnateja.xyz/phonegaptest/json.php', function (data) {
+            alert(data.items[0].id);
+          });
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event

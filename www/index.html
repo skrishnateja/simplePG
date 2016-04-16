@@ -29,18 +29,31 @@
       <!--   <script src="js/jquery-mobile.js"></script>
        -->  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+
+        <link rel="stylesheet" href="css/styles.css" />
         <title>Hello World</title>
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-                <p id="id">Nothing</p>
+                  
+        <div id="employeeListPage" data-role="page" >
+
+            <div data-role="header" data-position="fixed">
+                <h1 id="title">Language Translator</h1>
             </div>
+
+            <div data-role="content">
+                 <ul id="employeeList" data-role="listview" data-filter="true"></ul>
+            </div>      
+
+        </div>
         </div>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/employeelist.js"></script>
+        <script src="js/employeedetails.js"></script>
+        <script src="js/reportlist.js"></script>
+
         <script type="text/javascript">
             app.initialize();
         </script>
