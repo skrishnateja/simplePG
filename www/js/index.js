@@ -46,8 +46,9 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        alert("JSON");
         $.getJSON('http://skrishnateja.xyz/phonegaptest/json.php', function (data) {
-            parentElement.innerHTML = data;
+            alert(data);
           });
     }
 };
