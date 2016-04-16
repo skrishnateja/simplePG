@@ -19,6 +19,10 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        alert("JSON");
+        $.getJSON('http://skrishnateja.xyz/phonegaptest/json.php', function (data) {
+            alert(data);
+          });
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -46,9 +50,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        alert("JSON");
-        $.getJSON('http://skrishnateja.xyz/phonegaptest/json.php', function (data) {
-            alert(data);
-          });
+        
     }
 };
